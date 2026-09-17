@@ -37,7 +37,6 @@ public class FirstLetters {
             }
 
         }
-
         return firstLetters;
     }
 }

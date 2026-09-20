@@ -109,7 +109,15 @@ public class NumberTriangle {
     //       value of wherever you ended up. An empty path means "stay here".
     //       Hint: String#charAt(int) and String#length() are all you need for the
     //       iterative version; a recursive version can use String#substring(1).
-    return 0;
+    if (isLeaf() || path.isEmpty()) {
+      return getRoot();
+    } else {
+      if (path.charAt(0) == 'l'){
+        return left.retrieve(path.substring(1));
+      } else {
+        return right.retrieve(path.substring(1));
+      }
+    }
   }
 
   /**
